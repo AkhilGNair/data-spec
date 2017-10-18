@@ -1,0 +1,36 @@
+default:
+
+    paths:
+        cache: "cache/"  # Doesn't work
+
+    data_specification:
+        dt_house_prices:
+            init_function: init_house_prices
+            assign: dt
+            save_as: cache/house_prices.fst  
+            colnames:
+                V1:  id
+                V2:  price
+                V3:  date
+                V4:  postcode
+                V5:  type
+                V6:  new
+                V7:  hold
+                V8:  number
+                V9:  no2
+                V10: street
+                V11: locality
+                V12: town
+                V13: authority
+                V14: county
+                V15: status
+                V16: Unk
+                
+        dt_postcodes:
+            init_function: init_postcodes
+            assign: dt_postcodes
+            save_as: cache/postcodes.fst  
+            colnames:
+                postcode:  postcode
+                latitude:  latitude
+                longitude: longitude
